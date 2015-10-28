@@ -19,7 +19,7 @@ gulp.task('clean', function () {
 
 gulp.task('build', function () {
   mkdirp.sync(dest)
-  return gulp.src('src/**/*.es6')
+  return gulp.src('src/**/*.js')
     .pipe(plumb())
     .pipe(plugins.babel({optional: ['runtime', 'asyncToGenerator']}))
     .pipe(gulp.dest(dest))
